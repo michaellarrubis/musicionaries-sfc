@@ -1,0 +1,29 @@
+<%= link_to event_path(@event), class: "chip blue white-text u-back" do %>
+  <%= material_icon.chevron_left %>  Back to Details
+<% end %>
+
+<%= link_to event_detail_path(@event, @detail, format: :pdf), target: :blank, class: "chip white blue-text u-bordered" do %>
+  Download PDF
+<% end %>
+
+<div class="card z-depth-0 blue white-text">
+  <div class="card-content">
+    <div class="details--talk">
+      <div class="details--talk-title">
+        <span class="card-title"><small>Talk: </small><strong><%= @detail.title %></strong></span>
+      </div>
+      <div class="details--talk-songs">
+        <ul class="talk-song-list">
+          <% @detail_songs.each do |detail_song| %>
+            <% title = detail_song.song.title %>
+            <li class="talk-song-item">
+              <%= link_to title, "##{anchor_text(title)}", class: "talk-song-item-link white chip blue-text" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render partial: "songs/song-content" %>

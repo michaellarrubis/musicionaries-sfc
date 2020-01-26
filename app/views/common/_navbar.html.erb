@@ -1,0 +1,48 @@
+<nav class="white">
+  <div class="nav-wrapper container">
+    <%= link_to current_title, root_path, class: "brand-logo black-text" %>
+    <a href="#" data-target="slide-out" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile navbar-list" class="right hide-on-med-and-down">
+      <li class="navbar-item"><%= link_to "Events", events_path, class: "black-text navbar-link" %></li>
+      <li class="navbar-item"><%= link_to "Songs", songs_path, class: "black-text navbar-link" %></li>
+      <% if user_signed_in? %>
+        <li>
+          <a class="dropdown-trigger black-text navbar-link" href="#!" data-target="dropdown1">
+            Settings<i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+      <% else %>
+        <li class="navbar-item"><%= link_to "Login", new_user_session_path, class: "black-text navbar-link" %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+<!-- Dropdown Content -->
+<ul id="dropdown1" class="navbar-dropdown dropdown-content">
+  <% if current_user && current_user.admin? %>
+    <li class="navbar-item"><%= link_to "Add Song", new_song_path, class: "black-text navbar-link" %></li>
+  <% end %>
+  <li class="navbar-item"><%= link_to "Add Event", new_event_path, class: "black-text navbar-link" %></li>
+  <li class="divider"></li>
+  <li class="navbar-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "black-text navbar-link" %></li>
+</ul>
+<!-- Dropdown Content -->
+
+<!-- Side Nav on SP -->
+<ul id="slide-out" class="sidenav">
+  <li class="navbar-item"><%= link_to "Events", events_path, class: "black-text navbar-link" %></li>
+  <li class="navbar-item"><%= link_to "Songs", songs_path, class: "black-text navbar-link" %></li>
+  <li class="divider"></li>
+  <% if user_signed_in? %>
+    <% if current_user && current_user.admin? %>
+      <li class="navbar-item"><%= link_to "Add Song", new_song_path, class: "black-text navbar-link" %></li>
+    <% end %>
+    <li class="navbar-item"><%= link_to "Add Event", new_event_path, class: "black-text navbar-link" %></li>
+    <li class="divider"></li>
+    <li class="navbar-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "black-text navbar-link" %></li>
+  <% else %>
+    <li class="navbar-item"><%= link_to "Login", new_user_session_path, class: "black-text navbar-link" %></li>
+  <% end %>
+</ul>
+<!-- Side Nav on SP -->

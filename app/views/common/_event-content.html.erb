@@ -1,0 +1,11 @@
+<%= link_to event do %>
+  <div class="card z-depth-0 black-text">
+    <div class="card-content">
+      <p class="light"><%= event.event_category.title %></p>
+      <span class="card-title u-bolder"><%= event.title %></span>
+
+      <p class="light">By</p>
+      <span class="card-title u-bolder"><%= event.by %></span>
+    </div>
+  </div>
+<% end %>

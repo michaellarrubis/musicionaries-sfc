@@ -1,0 +1,37 @@
+.u-bold {
+  font-weight: 700;
+}
+
+.u-bolder {
+  font-weight: 800;
+}
+
+.u-bordered {
+  border: 1px solid #64B5F6;
+}
+
+.u-back {
+  position: relative;
+  padding: 0 12px 0 30px !important;
+
+  .material-icons {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+  }
+}
+
+.u-next{
+  text-align: right;
+  
+  a {
+    position: relative;
+    padding: 0 30px 0 12px !important;
+
+    .material-icons {
+      position: absolute;
+      top: 4px;
+      right: 5px;
+    }
+  }
+}

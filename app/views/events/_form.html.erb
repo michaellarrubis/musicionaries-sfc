@@ -1,0 +1,26 @@
+<div class="card z-depth-0">
+  <div class="card-content">
+    <%= form_with(model: event, local: true) do |form| %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+
+      <div class="input-field">
+        <p>Title</p>
+        <%= form.text_field :title, class: "form__input", placeholder: '(Ex: CLP Talk)', required: true %>
+      </div>
+
+      <div class="input-field">
+        <p>By</p>
+        <%= form.text_field :by, class: "form__input", placeholder: '(Ex: Guadalupe Chapter - SFC)', required: true %>
+      </div>
+
+      <div class="input-field">
+        <p>Category</p>
+        <%= form.collection_select(:event_category_id, EventCategory.all, :id, :title) %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Save", class: "btn z-depth-0 btn-block"%>
+      </div>
+    <% end %>
+  </div>
+</div>

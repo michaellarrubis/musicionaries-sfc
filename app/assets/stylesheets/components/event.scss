@@ -1,0 +1,29 @@
+.event-list {}
+
+.event-item {
+  display: flex;
+}
+
+.event-item-content {
+  width: 50%;
+}
+
+.event-item-title {
+  span {
+    font-weight: normal;
+  }
+}
+
+.event-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  a {
+    padding-right: 10px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<% if current_user %>
+  <div class="u-next">
+    <%= link_to new_event_path, class: "chip blue white-text" do %>
+      <%= material_icon.chevron_right %> Add Event
+    <% end %>
+  </div>
+<% end %>
+
+<div class="row">
+  <% @events.each do |event| %>
+    <div class="col s12 m12 l4">
+      <%= render partial: "common/event-content", locals: { event: event } %>
+    </div>
+  <% end %>
+</div>

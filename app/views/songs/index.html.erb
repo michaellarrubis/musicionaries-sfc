@@ -1,0 +1,19 @@
+<div class="songs">
+  <% if params[:search] %>
+    <%= render "common/song-search" %>
+  <% end %>
+
+  <% if @songs %>
+    <div class="songs-list">
+      <% @songs.each do |song| %>
+        <%= link_to song, class: "songs-item white" do %>
+          <div class="songs-item__content black-text">
+            <div class="songs-item__content-color js-color"></div>
+            <p class="songs-item__content-title black-text"><%= song.title %></p>
+            <p class="songs-item__content-editor grey-text"><%= song.artist %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
