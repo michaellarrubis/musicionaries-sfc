@@ -13,9 +13,21 @@ main {
   margin: 20px auto 30px !important;
 }
 
-.brand-logo {
-  font-weight: 200;
-  white-space: pre;
+nav {
+  .brand-logo {
+    font-weight: 200;
+    white-space: pre;
+
+    @media (max-width: 425px) {
+      font-size: 25px !important;
+    }
+  }
+
+  .sidenav-trigger {
+    @media (max-width: 768px) {
+      margin: 0 18px 0 0 !important;
+    }
+  }
 }
 
 .page-footer {

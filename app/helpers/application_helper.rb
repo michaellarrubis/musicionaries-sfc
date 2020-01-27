@@ -1,11 +1,11 @@
 module ApplicationHelper
   def full_title(page_title = '')
-    base_title = "Musicionaries' Events - Singles For Christ"
+    base_title = "#{current_title} Events - Singles For Christ"
     return page_title.empty? ? base_title : "#{page_title} | #{base_title}"
   end
 
   def current_title
-    return "Musicionaries Events"
+    return "Musicionaries"
   end
 
   def anchor_text(text)
