@@ -14,6 +14,12 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %> grey lighten-5">
+    <%= content_tag(:script) do %>
+      <% flash.each do |type, message| %>
+        <%= toastr_flash_class("#{type}") %>('<%= message %>')
+      <% end %>
+    <% end %>
+    
     <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
       <%= render "common/navbar" %>
     <% end %>

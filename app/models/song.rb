@@ -1,6 +1,6 @@
 class Song < ApplicationRecord
   belongs_to :user
-  has_many :song_assigns, dependent: :destroy
+  has_many :selected_songs, dependent: :destroy
 
   extend FriendlyId
   friendly_id :title, use: :slugged

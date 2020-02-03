@@ -27,4 +27,15 @@ module ApplicationHelper
       "toastr.info"
     end
   end
+
+  def toastr_flash_class(type)
+    case type
+    when "alert"
+      "toastr.error"
+    when "notice"
+      "toastr.success"
+    else
+      "toastr.info"
+    end
+  end
 end

@@ -13,12 +13,20 @@
           <%= link_to event_detail_path(@event, detail), class: "event-item-content event-item-title black-text" do %>
             <%= detail.title %>
           <% end %>
-          <div class="event-item-content event-item-actions">
-            <% if current_user && @event.user.id == current_user.id || current_user && current_user.admin? %>
-              <%= link_to 'Edit', edit_event_detail_path(@event, detail) %>
-              <%= link_to 'Remove', [@event, detail], method: :delete, data: { confirm: 'Are you sure?' } %>
-            <% end %>
-          </div>
+          <% if current_user %>
+            <div class="event-item-content event-item-actions">
+              <% if current_user && @event.user.id == current_user.id || current_user && current_user.admin? %>
+                <%= link_to "Edit", edit_event_detail_path(@event, detail) %>
+                <%= link_to "Remove", [@event, detail], method: :delete, data: { confirm: "Are you sure?" } %>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="event-item-content event-item-actions u-next">
+              <%= link_to event_detail_path(@event, detail), class: "chip blue white-text" do %>
+                <%= material_icon.chevron_right %> Open
+              <% end %>
+            </div>
+          <% end %>
         </li>
       <% end %>
     </ul>

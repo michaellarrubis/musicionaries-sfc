@@ -2,6 +2,14 @@
 
 .event-item {
   display: flex;
+
+  @media (max-width: 768px) {
+    align-items: center;
+
+    .chip {
+      margin: 0;
+    }
+  }
 }
 
 .event-item-content {

@@ -32,6 +32,14 @@ nav {
 
 .page-footer {
   padding-top: 0;
+  
+  @media (max-width: 768px) {
+    .red-text {
+      display: block;
+      font-size: 30px;
+      line-height: 0.8;
+    }
+  }
 }
 
 .input-field {
@@ -108,3 +116,4 @@ nav {
     display: block;
   }
 }
+
