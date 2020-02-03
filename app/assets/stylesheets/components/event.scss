@@ -2,13 +2,10 @@
 
 .event-item {
   display: flex;
+  align-items: center;
 
-  @media (max-width: 768px) {
-    align-items: center;
-
-    .chip {
-      margin: 0;
-    }
+  .chip {
+    margin: 0;
   }
 }
 
