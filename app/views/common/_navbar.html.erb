@@ -11,8 +11,6 @@
             Settings<i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
-      <% else %>
-        <li class="navbar-item"><%= link_to "Login", new_user_session_path, class: "black-text navbar-link" %></li>
       <% end %>
     </ul>
   </div>
@@ -41,8 +39,6 @@
     <li class="navbar-item"><%= link_to "Add Event", new_event_path, class: "black-text navbar-link" %></li>
     <li class="divider"></li>
     <li class="navbar-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "black-text navbar-link" %></li>
-  <% else %>
-    <li class="navbar-item"><%= link_to "Login", new_user_session_path, class: "black-text navbar-link" %></li>
   <% end %>
 </ul>
 <!-- Side Nav on SP -->

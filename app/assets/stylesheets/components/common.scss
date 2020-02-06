@@ -36,8 +36,8 @@ nav {
   @media (max-width: 768px) {
     .red-text {
       display: block;
-      font-size: 30px;
-      line-height: 0.8;
+      font-size: 22px;
+      line-height: 0.9;
     }
   }
 }
@@ -83,6 +83,8 @@ nav {
 }
 
 .toast {
+  top: 10px !important;
+
   &.toast-success {
     background-color: #33691e !important;
   }

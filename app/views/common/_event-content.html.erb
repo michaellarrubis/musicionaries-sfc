@@ -1,16 +1,11 @@
 <%= link_to event do %>
-  <div class="card z-depth-0">
+  <div class="card z-depth-0 event-detail">
     <div class="card-content">
       <p class="light black-text"><%= event.event_category.title %></p>
-      <span class="card-title u-bolder blue-text"><%= event.title %></span>
+      <span class="card-title blue-text event-detail-text"><%= event.title %></span>
 
       <p class="light black-text">By</p>
-      <span class="card-title u-bolder blue-text"><%= event.by %></span>
+      <span class="card-title blue-text event-detail-text"><%= event.by %></span>
     </div>
-    <% if current_page?(root_path) || current_page?(events_path) %>
-      <div class="card-action">
-        <%= link_to "Open", event, class: "grey-text" %>
-      </div>
-    <% end %>
   </div>
 <% end %>

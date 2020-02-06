@@ -14,6 +14,7 @@ eventCategory = [
   {'title': 'Teaching Night'},
   {'title': 'Chapter Prayer Assembly'},
   {'title': 'Conference'},
+  {'title': 'Household'},
   {'title': 'Other'}
 ]
 

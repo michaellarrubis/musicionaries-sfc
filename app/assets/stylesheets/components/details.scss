@@ -1,6 +1,18 @@
 .details {
-  .card-title {
+  .song-content .card-title {
     margin-bottom: 0 !important;
+  }
+}
+
+.details--talk-header {
+  @media (max-width: 768px) {
+    .card-content {
+      padding: 10px 24px !important;
+    }
+
+    .talk-song-item-link {
+      margin: 0 0 5px;
+    }
   }
 }
 
@@ -15,12 +27,26 @@
 }
 
 .details--talk-songs {
+  .details--talk-title {
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
   .talk-song-list {
     display: flex;
 
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: center;
+      margin: 0;
     }
+  }
+}
+
+.details--talk-header-action {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
   }
 }

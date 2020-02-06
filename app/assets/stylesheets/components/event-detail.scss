@@ -1,0 +1,12 @@
+.event-detail {
+  &:hover {
+    outline: 1px solid rgba(#2196F3, 0.8);
+    -webkit-box-shadow: 3px 7px 9px -11px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 3px 7px 9px -11px rgba(0,0,0,0.75) !important;
+    box-shadow: 3px 7px 9px -11px rgba(0,0,0,0.75) !important;
+  }
+}
+
+.event-detail-text {
+  font-size: 22px !important;
+}

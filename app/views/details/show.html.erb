@@ -1,12 +1,14 @@
-<%= link_to event_path(@event), class: "chip blue white-text u-back" do %>
-  <%= material_icon.chevron_left %>  Back to Details
-<% end %>
+<div class="details--talk-header-action">
+  <%= link_to event_path(@event), class: "chip blue white-text u-back" do %>
+    <%= material_icon.chevron_left %>  Back to Details
+  <% end %>
 
-<%= link_to event_detail_path(@event, @detail, format: :pdf), target: :blank, class: "chip white blue-text u-bordered" do %>
-  Download PDF
-<% end %>
+  <%= link_to event_detail_path(@event, @detail, format: :pdf), target: :blank, class: "chip white blue-text u-bordered" do %>
+    Download PDF
+  <% end %>
+</div>
 
-<div class="card z-depth-0 blue white-text">
+<div class="card z-depth-0 blue white-text details--talk-header">
   <div class="card-content">
     <div class="details--talk">
       <div class="details--talk-title">
@@ -24,6 +26,15 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="song-list-side js-scroll-song-list">
+  <% @detail_songs.each_with_index do |detail_song, index| %>
+    <% title = detail_song.song.title %>
+    <%= link_to "##{anchor_text(title)}", class: "song-item-side blue white-text lighten-2" do %>
+      <%= index + 1 %>
+    <% end %>
+  <% end %>
 </div>
 
 <%= render partial: "songs/song-content" %>
