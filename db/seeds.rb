@@ -3,10 +3,10 @@ if !User.exists?(email: ENV["ADMIN_EMAIL"])
     email: ENV["ADMIN_EMAIL"], 
     password: ENV["ADMIN_PASS"], 
     password_confirmation: ENV["ADMIN_PASS"],
-    user_type: 101
+    user_type: ENV["ADMIN_USER_TYPE"]
   )
 
-  p "Seeded Data Successfully"
+  p "Seeded Admin Data Successfully"
 end
 
 eventCategory = [
@@ -22,6 +22,6 @@ eventCategory.collect do |ec|
   if !EventCategory.exists?(:title => ec[:title])
     EventCategory.create!('title': ec[:title])
 
-    p "Seeded Data Successfully"
+    p "Seeded Event Category Data Successfully"
   end
 end

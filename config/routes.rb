@@ -13,4 +13,6 @@ Rails.application.routes.draw do
       resources :events, only: [:index]
     end
   end
+
+  get '*path', controller: 'application', action: 'render_404'
 end
