@@ -1,11 +1,8 @@
-<%= link_to event do %>
+<%= link_to event, class: "black-text" do %>
   <div class="card z-depth-0 event-detail">
     <div class="card-content">
-      <p class="light black-text"><%= event.event_category.title %></p>
-      <span class="card-title blue-text event-detail-text"><%= event.title %></span>
-
-      <p class="light black-text">By</p>
-      <span class="card-title blue-text event-detail-text"><%= event.by %></span>
+      <span class="card-title event-detail-text event-detail-text-title <%= event.event_category.title.downcase %>"><%= event.event_category.title %> Events</span>
+      <p class="light grey-text">By: <%= event.by %></p>
     </div>
   </div>
 <% end %>

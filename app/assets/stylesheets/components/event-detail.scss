@@ -1,12 +1,56 @@
 .event-detail {
   &:hover {
-    outline: 1px solid rgba(#2196F3, 0.8);
     -webkit-box-shadow: 3px 7px 9px -11px rgba(0,0,0,0.75) !important;
     -moz-box-shadow: 3px 7px 9px -11px rgba(0,0,0,0.75) !important;
     box-shadow: 3px 7px 9px -11px rgba(0,0,0,0.75) !important;
   }
 }
 
-.event-detail-text {
-  font-size: 22px !important;
+.event-detail-text-title {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 7px;
+    left: -12px;
+    width: 28px;
+    opacity: 0.5;
+  }
+
+  &.household {
+    &::before {
+      border-top: 5px solid #039be5;
+    }
+  }
+
+  &.teaching {
+    &::before {
+      border-top: 5px solid #26a69a;
+    }
+  }
+
+  &.chapter {
+    &::before {
+      border-top: 5px solid #ec407a;
+    }
+  }
+
+  &.conference {
+    &::before {
+      border-top: 5px solid #8d6e63;
+    }
+  }
+
+  &.christian {
+    &::before {
+      border-top: 5px solid #ab47bc;
+    }
+  }
+
+  &.other {
+    &::before {
+      border-top: 5px solid #ff7043;
+    }
+  }
 }

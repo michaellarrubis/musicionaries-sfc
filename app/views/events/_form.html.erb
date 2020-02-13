@@ -4,18 +4,13 @@
       <%= form.hidden_field :user_id, value: current_user.id %>
 
       <div class="input-field">
-        <p>Title</p>
-        <%= form.text_field :title, class: "form__input", placeholder: '(Ex: CLP Talk)', required: true %>
+        <p>Event Category</p>
+        <%= form.collection_select(:event_category_id, EventCategory.all, :id, :title) %>
       </div>
 
       <div class="input-field">
         <p>By</p>
         <%= form.text_field :by, class: "form__input", placeholder: '(Ex: Guadalupe Chapter - SFC)', required: true %>
-      </div>
-
-      <div class="input-field">
-        <p>Category</p>
-        <%= form.collection_select(:event_category_id, EventCategory.all, :id, :title) %>
       </div>
 
       <div class="actions">
