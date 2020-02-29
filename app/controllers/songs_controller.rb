@@ -6,7 +6,7 @@ class SongsController < ApplicationController
     if params[:search]
       @songs = Song.search(params[:search])
     else
-      @songs = Song.all
+      @songs = Song.all.order(:title)
     end
   end
 
