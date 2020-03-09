@@ -1,5 +1,6 @@
 class EventSerializer
   include FastJsonapi::ObjectSerializer
+  belongs_to :event_category
 
   attributes :id, :title, :by
 

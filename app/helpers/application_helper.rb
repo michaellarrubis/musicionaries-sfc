@@ -38,4 +38,12 @@ module ApplicationHelper
       "toastr.info"
     end
   end
+
+  def current_timestamp
+    return Time.new.strftime('%d%m%y-%k%M%S')
+  end
+
+  def current_base_url
+    return request.base_url
+  end
 end

@@ -9,13 +9,13 @@ module Api
 
         events[:data].each do |d|
           event_data['id'] = d[:id]
-          event_data['title'] = d[:attributes][:title]
           event_data['by'] = d[:attributes][:by]
           details = d[:attributes][:details].to_hash
 
           details[:data].each do |detail|
             data = {}
             data['id'] = detail[:attributes][:id]
+            data['category'] = EventCategory.find_by_id(d[:relationships][:event_category][:data][:id]).title
             data['title'] = detail[:attributes][:title]
             selected_songs_data = []
 
