@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: musicionary_events_production
-  username: musicionary_events
-  password: <%= ENV['MUSICIONARY_EVENTS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
