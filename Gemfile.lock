@@ -241,7 +241,7 @@ GEM
     thread_safe (0.3.6-java)
     tilt (2.2.0)
     timeout (0.4.0)
-    tinymce-rails (6.5.1)
+    tinymce-rails (5.7.1)
       railties (>= 3.1.1)
     toastr-rails (1.0.3)
       railties (>= 3.1.0)
@@ -303,7 +303,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  tinymce-rails
+  tinymce-rails (~> 5.7.1)
   toastr-rails
   turbolinks (~> 5)
   tzinfo-data
