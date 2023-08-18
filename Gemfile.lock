@@ -165,8 +165,10 @@ GEM
     pg (1.5.3-x64-mingw32)
     pg (1.5.3-x86-mingw32)
     public_suffix (5.0.1)
-    puma (3.12.6)
-    puma (3.12.6-java)
+    puma (5.6.7)
+      nio4r (~> 2.0)
+    puma (5.6.7-java)
+      nio4r (~> 2.0)
     racc (1.7.1)
     racc (1.7.1-java)
     rack (2.2.7)
@@ -296,7 +298,7 @@ DEPENDENCIES
   materialize-sass (~> 1.0.0)
   nested_form_fields
   pg (>= 0.18, < 2.0)
-  puma (~> 3.11)
+  puma (~> 5.6)
   rack-cors
   rails (~> 5.2.4)
   sass-rails (~> 5.0)
